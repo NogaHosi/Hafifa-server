@@ -6,13 +6,13 @@ class DigitsData {
   id: string;
 
   @Column({length: 8})
-  first8: String;
+  first_eight: String;
 
   @Column()
-  lastDigit: number;
+  last_digit: number;
 
   @Column()
-  totalId: string;
+  total_id: string;
 }
 
 export default DigitsData;

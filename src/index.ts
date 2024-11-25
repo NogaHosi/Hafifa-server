@@ -1,7 +1,7 @@
 import { config } from "dotenv"
 import express, { Application } from "express"
 import { routes } from "./routes/route"
-import { MyDataSource } from "./app"
+import { dataSource } from "./app"
 const cors = require('cors');
 config();
 
@@ -14,7 +14,7 @@ app.use(cors());
 
 export const connectToDatabase = async () => {
   try {
-    await MyDataSource.initialize()
+    await dataSource.initialize()
     console.log("Connected to the DB")
   } catch (error) {
     console.error("DB connection failed", error)

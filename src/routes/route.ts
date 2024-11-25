@@ -1,9 +1,9 @@
 import { Router } from 'express';
 import {getLastDigit, saveData} from '../controllers/controller';
 
-const router = Router();
+const routes = Router();
 
-router.post('/save', saveData);
-router.post('/get', getLastDigit);
+routes.post('/save', saveData);
+routes.post('/get', getLastDigit);
 
-export { router as routes };
+export { routes };
